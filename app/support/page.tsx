@@ -119,7 +119,7 @@ const faqItems = [
   {
     question: "How much does Artistly charge?",
     answer:
-      "For artists, we charge a 5% service fee only when you get booked. Event planners can use our basic plan for free or upgrade to professional plans starting at $29/month.",
+      "For artists, we charge a 5% service fee only when you get booked. Event planners can use our basic plan for free or upgrade to professional plans starting at ₹29/month.",
   },
   {
     question: "Can I cancel a booking?",

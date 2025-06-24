@@ -25,7 +25,7 @@ const eventPlannerPlans = [
   },
   {
     name: "Professional",
-    price: "$29",
+    price: "₹29",
     period: "/month",
     description: "For regular event planners and small businesses",
     icon: Zap,
@@ -44,7 +44,7 @@ const eventPlannerPlans = [
   },
   {
     name: "Enterprise",
-    price: "$99",
+    price: "₹99",
     period: "/month",
     description: "For large organizations and frequent event planners",
     icon: Crown,
@@ -73,7 +73,7 @@ const artistFees = [
   {
     category: "Payment Processing",
     description: "Secure payment processing for all transactions",
-    fee: "2.9% + $0.30",
+    fee: "2.9% + ₹0.30",
     details: "Industry-standard payment processing fees",
   },
   {
@@ -93,22 +93,22 @@ const artistFees = [
 const additionalServices = [
   {
     name: "Professional Photography",
-    price: "$199",
+    price: "₹199",
     description: "Professional headshots and performance photos for your profile",
   },
   {
     name: "Video Production",
-    price: "$499",
+    price: "₹499",
     description: "Professional demo video creation and editing services",
   },
   {
     name: "Profile Optimization",
-    price: "$99",
+    price: "₹99",
     description: "Expert review and optimization of your artist profile",
   },
   {
     name: "Marketing Consultation",
-    price: "$149",
+    price: "₹149",
     description: "One-on-one consultation to grow your booking business",
   },
 ]

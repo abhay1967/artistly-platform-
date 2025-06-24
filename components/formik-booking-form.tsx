@@ -259,7 +259,7 @@ export function FormikBookingForm({ artist, isOpen, onClose }: FormikBookingForm
                       as={Input}
                       id="budget"
                       name="budget"
-                      placeholder="e.g., $500-1000"
+                      placeholder="e.g., ₹500-1000"
                       className={errors.budget && touched.budget ? "border-red-500" : ""}
                     />
                     <ErrorMessage name="budget" component="div" className="text-red-500 text-sm mt-1" />

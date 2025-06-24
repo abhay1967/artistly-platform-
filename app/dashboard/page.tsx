@@ -187,7 +187,7 @@ export default function DashboardPage() {
               <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-xl sm:text-2xl font-bold">$650</div>
+              <div className="text-xl sm:text-2xl font-bold">₹650</div>
               <p className="text-xs text-muted-foreground">Per booking</p>
             </CardContent>
           </Card>
