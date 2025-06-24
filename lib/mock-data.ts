@@ -25,6 +25,25 @@ export const categories = [
   { value: "performer", label: "Performer" },
 ]
 
+export const languages = [
+  "English",
+  "Hindi",
+  "Spanish",
+  "French",
+  "German",
+  "Mandarin",
+  "Japanese",
+  "Russian",
+  "Arabic",
+  "Portuguese",
+  "Bengali",
+  "Punjabi",
+  "Telugu",
+  "Marathi",
+  "Tamil",
+  "Urdu",
+]
+
 export const priceRanges = [
   { value: "₹10,000-₹25,000", label: "₹10,000 - ₹25,000" },
   { value: "₹25,000-₹50,000", label: "₹25,000 - ₹50,000" },

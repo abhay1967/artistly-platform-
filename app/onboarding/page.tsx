@@ -20,6 +20,7 @@ import { useArtists } from "@/lib/artist-context"
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   bio: z.string().min(50, "Bio must be at least 50 characters").max(500, "Bio must be less than 500 characters"),
+  experience: z.coerce.number().min(0, "Experience cannot be negative"),
   categories: z.array(z.string()).min(1, "Please select at least one category"),
   languages: z.array(z.string()).min(1, "Please select at least one language"),
   priceRange: z.string().min(1, "Please select a price range"),
@@ -53,6 +54,7 @@ export default function OnboardingPage() {
     defaultValues: {
       name: "",
       bio: "",
+      experience: 0,
       categories: [], // Multi-select array
       languages: [], // Multi-select array
       priceRange: "",
@@ -108,7 +110,7 @@ export default function OnboardingPage() {
       case 1:
         return ["name", "bio"]
       case 2:
-        return ["categories"]
+        return ["categories", "experience"]
       case 3:
         return ["priceRange", "location"]
       case 4:
@@ -129,6 +131,7 @@ export default function OnboardingPage() {
       addArtist({
         name: data.name,
         bio: data.bio,
+        experience: data.experience,
         category: data.categories,
         languages: data.languages,
         priceRange: data.priceRange,
@@ -137,7 +140,7 @@ export default function OnboardingPage() {
         rating: 0,
         reviewCount: 0,
         verified: false,
-        availability: "available" as const,
+        availability: ["available"],
       })
 
       console.log("Form submitted:", data)
@@ -204,6 +207,20 @@ export default function OnboardingPage() {
       case 2:
         return (
           <div className="space-y-6">
+            <FormField
+              control={form.control}
+              name="experience"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Years of Experience *</FormLabel>
+                  <FormControl>
+                    <Input type="number" placeholder="e.g., 5" {...field} />
+                  </FormControl>
+                  <FormDescription>How many years have you been performing professionally?</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <FormField
               control={form.control}
               name="categories"
@@ -279,7 +296,7 @@ export default function OnboardingPage() {
                 <FormItem>
                   <FormLabel>Location *</FormLabel>
                   <FormControl>
-                    <Input placeholder="City, State (e.g., New York, NY)" {...field} />
+                    <Input placeholder="e.g., Mumbai, Maharashtra" {...field} />
                   </FormControl>
                   <FormDescription>Your primary location for performances</FormDescription>
                   <FormMessage />
